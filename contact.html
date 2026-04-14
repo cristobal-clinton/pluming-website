@@ -179,20 +179,36 @@
                 <h3>Booking Confirmed!</h3>
             </div>
             <div class="modal-body">
-                <p>Your order number is:</p>
-                <div class="order-number-display" id="newOrderNumber">ORD-2024-XXX</div>
-                <p>We'll contact you within 15 minutes to confirm arrival time.</p>
-                <div class="modal-actions">
-                    <a href="track.html" class="btn-primary" id="trackOrderBtn">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Track Your Order
-                    </a>
-                    <button class="btn-secondary" id="closeModalBtn">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
+    <i class="fas fa-check-circle" style="font-size: 56px; color: var(--primary); margin-bottom: 20px;"></i>
+    <h3 style="margin-bottom: 16px;">Booking Confirmed!</h3>
+    <p>Your order number is:</p>
+    <div class="order-number-display" id="newOrderNumber">ORD-2024-XXX</div>
+    
+    <!-- NEW: Email notification simulation -->
+    <div style="background: rgba(5, 150, 105, 0.1); padding: 16px; border-radius: var(--radius-md); margin: 20px 0;">
+        <i class="fas fa-envelope" style="color: var(--primary);"></i>
+        <p style="margin-top: 8px;"><strong>We've sent this code to your email/phone.</strong></p>
+        <p style="font-size: 14px; opacity: 0.8;">Save this number to track your plumber.</p>
+    </div>
+    
+    <p>We'll contact you within 15 minutes to confirm arrival time.</p>
+    
+    <div class="modal-actions">
+        <a href="track.html" class="btn-primary" id="trackOrderBtn">
+            <i class="fas fa-map-marker-alt"></i>
+            Track Now
+        </a>
+        <button class="btn-secondary" id="closeModalBtn">
+            Close
+        </button>
+    </div>
+    
+    <!-- NEW: Copy button -->
+    <button class="btn-secondary" id="copyOrderBtn" style="margin-top: 16px; width: 100%;">
+        <i class="fas fa-copy"></i>
+        Copy Order Number
+    </button>
+</div>        </div>
     </div>
     
     <!-- Footer -->
