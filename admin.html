@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Precision Plumbing</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-page">
+    
+    <div class="cursor-glow"></div>
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Login Screen -->
+    <div class="admin-login" id="loginScreen">
+        <div class="login-card glass">
+            <div class="login-header">
+                <i class="fas fa-lock"></i>
+                <h2>Admin Portal</h2>
+                <p>Enter password to access dashboard</p>
+            </div>
+            
+            <div class="login-form">
+                <input type="password" id="adminPassword" placeholder="Enter password" class="glass-input">
+                <button class="btn-primary" id="loginBtn">
+                    <i class="fas fa-arrow-right"></i>
+                    Access Dashboard
+                </button>
+            </div>
+            
+            <div class="login-hint">
+                <i class="fas fa-info-circle"></i>
+                Demo: admin123
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dashboard -->
+    <div class="admin-dashboard" id="dashboardScreen" style="display: none;">
+        
+        <nav class="admin-nav glass">
+            <div class="nav-left">
+                <i class="fas fa-wrench"></i>
+                <span>Precision Admin</span>
+            </div>
+            <div class="nav-right">
+                <button class="refresh-btn" id="refreshDashboard">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="dashboard-container">
+            
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card glass">
+                    <i class="fas fa-clipboard-list"></i>
+                    <div class="stat-info">
+                        <h3 id="activeOrdersCount">0</h3>
+                        <p>Active Orders</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card glass">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="stat-info">
+                        <h3 id="completedTodayCount">0</h3>
+                        <p>Completed Today</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card glass">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <h3 id="availablePlumbersCount">0</h3>
+                        <p>Plumbers Available</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Active Orders -->
+            <div class="orders-section">
+                <h2><i class="fas fa-clock"></i> Active Orders</h2>
+                <div class="orders-list" id="activeOrdersList">
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>No active orders</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Plumbers -->
+            <div class="plumbers-section">
+                <h2><i class="fas fa-hard-hat"></i> Available Plumbers</h2>
+                <div class="plumbers-grid" id="plumbersList"></div>
+            </div>
+            
+            <!-- Completed Orders -->
+            <div class="completed-section">
+                <h2><i class="fas fa-history"></i> Recent Completed</h2>
+                <div class="completed-list" id="completedOrdersList"></div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
