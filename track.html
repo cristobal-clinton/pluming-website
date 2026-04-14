@@ -68,25 +68,42 @@
             
             <!-- Order Lookup -->
             <div class="track-lookup glass" id="lookupSection">
-                <h1>
-                    <i class="fas fa-search-location"></i>
-                    Track Your Plumber
-                </h1>
-                <p>Enter your order number to see real-time status</p>
-                
-                <div class="lookup-form">
-                    <input type="text" id="orderIdInput" placeholder="Order # (e.g., ORD-2024-001)" class="glass-input">
-                    <button class="btn-primary" id="trackOrderBtn">
-                        <i class="fas fa-search"></i>
-                        Track
-                    </button>
-                </div>
-                
-                <div class="demo-info">
-                    <p><i class="fas fa-info-circle"></i> Demo Order: ORD-2024-001</p>
-                </div>
-            </div>
-            
+    <h1>
+        <i class="fas fa-search-location"></i>
+        Track Your Plumber
+    </h1>
+    <p>Enter your order number to see real-time status</p>
+    
+    <div class="lookup-form">
+        <input type="text" id="orderIdInput" placeholder="Order # (e.g., ORD-2024-001)" class="glass-input">
+        <button class="btn-primary" id="trackOrderBtn">
+            <i class="fas fa-search"></i>
+            Track
+        </button>
+    </div>
+    
+    <!-- NEW: Lost order number help -->
+    <div class="lost-order-help" style="margin-top: 24px;">
+        <p style="margin-bottom: 12px;">
+            <i class="fas fa-question-circle" style="color: var(--primary);"></i>
+            Lost your order number?
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+            <input type="tel" id="lookupPhone" placeholder="Enter your phone number" class="glass-input" style="max-width: 200px;">
+            <button class="btn-secondary" id="lookupByPhoneBtn">
+                <i class="fas fa-search"></i>
+                Find My Order
+            </button>
+        </div>
+        <p style="font-size: 12px; opacity: 0.6; margin-top: 8px;">
+            We'll find your order using the phone number you booked with.
+        </p>
+    </div>
+    
+    <div class="demo-info">
+        <p><i class="fas fa-info-circle"></i> Demo Order: ORD-2024-001</p>
+    </div>
+</div>            
             <!-- Order Details -->
             <div class="order-details glass" id="orderDetails" style="display: none;">
                 
